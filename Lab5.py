@@ -1,4 +1,4 @@
-class Sneakers:
+class Sneakers
 
     def __init__(self, brand=None, size=0, color=None, price=0,
                  quantity=0, material=None, numberOfSales=0, etc=None):
