@@ -11,13 +11,10 @@ class Sneakers:
         self.etc = etc
 
 
+class SportShoesStore:
 
-class SportShoesStore(Sneakers):
-
-    def __init(self, brand, size, color, price, quantity, material, numberOfSales, etc, shop: list):
-         
-         super().__init__(brand, size, color, price, quantity, material, numberOfSales, etc)
-         self.shop = shop
+    def __init__(self, shop: list):
+        self.shop = shop
 
 
 sneaker1 = Sneakers(
@@ -59,7 +56,3 @@ shop = [sneaker1, sneaker2, sneaker3]
 shopp = SportShoesStore(shop)
 
 print(shopp.shop)
-
-
-
-    
