@@ -1,7 +1,7 @@
 class Sneakers:
 
     def __init__(self, brand=None, size=0, color=None, price=0,
-                 quantity=0, material=None, numberOfSales=0, etc=None, ee=None):
+                 quantity=0, material=None, numberOfSales=0, etc=None):
         self.brand = brand
         self.size = size
         self.color = color
