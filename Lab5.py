@@ -19,10 +19,13 @@ class Sneakers:
     def price(self):
         return self.__price
 
+       @property
+    def price(self):
+        return self.__price
+
     @price.setter
     def price(self, val):
-        if val < 0:
-            raise ValueError("Ціна не може бути від'ємною")
+        check_number(val, "Ціна")
         self.__price = val
 
     @property
@@ -31,19 +34,17 @@ class Sneakers:
 
     @quantity.setter
     def quantity(self, val):
-        if val < 0:
-            raise ValueError("Кількість не може бути від'ємною")
+        check_number(val, "Кількість")
         self.__quantity = val
 
     @property
-    def numofsale(self):
-        return self.__numberOfSales
+    def number_of_sales(self):
+        return self.__number_of_sales
 
-    @numofsale.setter
-    def numofsale(self, val):
-        if val < 0:
-            raise ValueError("Кількість продажів не може бути від'ємною")
-        self.__numberOfSales = val
+    @number_of_sales.setter
+    def number_of_sales(self, val):
+        check_number(val, "Кількість продажів")
+        self.__number_of_sales = val
 
 
 class SportShoesStore:
