@@ -1,7 +1,7 @@
 class Sneakers:
 
     def __init__(self, brand=None, size=0, color=None, price=0,
-                 quantity=0, material=None, numberOfSales=0, etc=None):
+                 quantity=0, material=None, number_of_sales=0, etc=None):
         self.brand = brand
         self.size = size
         self.color = color
@@ -9,7 +9,7 @@ class Sneakers:
         self.etc = etc
         self.price = price
         self.quantity = quantity
-        self.numofsale = numberOfSales
+        self.number_of_sales = number_of_sales
 
     def __str__(self):
         return (f"{self.brand}: Ціна: {self.__price}, Розмір: {self.size}, "
