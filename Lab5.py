@@ -53,6 +53,10 @@ class SportShoesStore:
         self.__store = []
 
     def add(self, shoe):
+        if not isinstance(shoe, Sneakers):
+            raise TypeError(
+                f"Можна додати лише об'єкт Sneakers, а не {type(shoe).__name__}"
+            )
         self.__store.append(shoe)
 
     def remove(self, shoe):
@@ -69,7 +73,7 @@ class SportShoesStore:
         return sorted(self.__store, key=lambda shoe: shoe.quantity)
 
     def sort_popular(self):
-        return sorted(self.__store, key=lambda shoe: shoe.numofsale, reverse=True)
+        return sorted(self.__store, key=lambda shoe: shoe.number_of_sales, reverse=True)
 
     def __str__(self):
         if not self.__store:
